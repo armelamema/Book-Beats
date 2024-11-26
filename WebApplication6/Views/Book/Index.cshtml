@@ -1,0 +1,22 @@
+﻿@model IEnumerable<BooksAndBeats.Models.Book>
+
+<h2>Books</h2>
+<table>
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Genre</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var book in Model)
+        {
+            <tr>
+                <td>@book.Title</td>
+                <td>@book.Author.FirstName @book.Author.LastName</td>
+                <td>@book.Genre.Name</td>
+            </tr>
+        }
+    </tbody>
+</table>
